@@ -1,2 +1,2 @@
 # Coran-Converter
-A simple arabic character converter to number, devloped in python with love
+A simple arabic character to number converter, devloped in python with love
