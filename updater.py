@@ -75,7 +75,9 @@ def LaunchUpdate():
         r = requests.get(zip_to_install, allow_redirects=True)
 
     except requests.exceptions.ConnectionError:
-        print("Download Error: We think, you have no connection or you are banned ip from GitHub")
+        messagebox.showerror("Download Error:", "Maybe, you have no connection or maybe, you are ip banned from GitHub.")
+        root.destroy()
+        LaunchUpdate()
 
     else:
 
