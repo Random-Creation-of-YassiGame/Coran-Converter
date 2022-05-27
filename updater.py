@@ -5,6 +5,7 @@
 # | |  → "Créé par YassiGame | Ici c'est le main de l'app"     | |
 # | |__________________________________________________________| |
 # |______________________________________________________________|
+import time
 
 print(f'''
        ______                         ______                           __           
@@ -56,9 +57,7 @@ else:
 
 import json, os, shutil, zipfile, requests
 from pathlib import Path
-import tkinter as tk
-from tkinter import ttk
-from tkinter.messagebox import showinfo
+from tkinter import messagebox
 
 from scripts.app import launchapp
 
@@ -67,18 +66,9 @@ update_cache_in_github = 'https://raw.githubusercontent.com/Random-Creation-of-Y
 path_update_cache = "../data/files/cache/cache_version.json"
 update_zipfile = '../data/files/cache/update/update.zip'
 
-
-class App(tk.Tk):
-    def __init__(self):
-        super().__init__()
-
-        # configure the root window
-        self.title('My Awesome App')
-        self.geometry('300x50')
-
-        # label
-        self.label = ttk.Label(self, text='Hello, Tkinter!')
-        self.label.pack()
+root = Tk()
+root.geometry("0x0")
+root.withdraw()
 
 def LaunchUpdate():
     try:
@@ -95,7 +85,7 @@ def LaunchUpdate():
             zip_ref.extractall('../data/files/cache/update/unzip_update')
 
         root_src_dir = '../data/files/cache/update/unzip_update/Coran-Converter-main'
-        root_dst_dir = '../'
+        root_dst_dir = './'
 
 
         for src_dir, dirs, files in os.walk(root_src_dir):
@@ -122,7 +112,36 @@ def LaunchUpdate():
 
 if __name__ == '__main__':
 
-    update_app = App()
-    update_app.mainloop()
+    try:
+        my_file = Path(path_update_cache)
+        my_abs_path = my_file.resolve(strict=True)
+
+    except FileNotFoundError:
+        print(" >  Je ne trouve pas le fichier 'cache_version.json', je vais créé un nouveau fichier:")
+        LaunchUpdate()
+
+    else:
+        r = requests.get(update_cache_in_github, stream=True)
+        r = str(r.content).replace("'", "")
+        version_in_github = r.replace("b", "")
+
+        version_in_github = json.loads(version_in_github)
+
+        try:
+            with open(path_update_cache, 'r') as file:  # open file ('settings.json')
+                output = json.load(file)
+
+            if str(output['version']) == str(version_in_github['version']):
+                messagebox.showinfo("You have the latest version", "The app has latest version")
+                root.destroy()
+                launchapp()
+            else:
+                messagebox.showwarning("Don't Have recent version !", f"You have the version '{str(output['version'])}', but in github the new version is '{str(version_in_github['version'])}'. We will launch the update.")
+                root.destroy()
+                LaunchUpdate()
+
+        except json.decoder.JSONDecodeError:
+            messagebox.showinfo("No Data in the cache version file", "The file responsible for checking the version of the app has no data. We will launch the update.")
+            LaunchUpdate()
 
 
