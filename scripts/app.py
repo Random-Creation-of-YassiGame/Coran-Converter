@@ -6,19 +6,10 @@
 # | |_______________________________________________________________| |
 # |___________________________________________________________________|
 
-
-
-
-from tkinter import *
-import tkinter
-
-
-
+from scripts import configurer
 from PIL import ImageTk, Image
-
-
-## Import some other modules:
-import datetime
+import tkinter, datetime
+from tkinter import *
 
 #  _________________________________________________
 # |  _____________________________________________  |
@@ -26,16 +17,21 @@ import datetime
 # | |  → "Une variable ('date' et 'time_format')" | |
 # | |_____________________________________________| |
 # |_________________________________________________|
-from scripts import configurer
 
 date = datetime.datetime.now()
 time_format = f"{date.hour}:{date.minute}"
 
-
+#  ________________________________________________
+# |  ____________________________________________  |
+# | | Class (Class for the app):                 | |
+# | |  → "All setiings for the app in one class" | |
+# | |____________________________________________| |
+# |________________________________________________|
 
 class App(tkinter.Tk):
     def __init__(self):
         super().__init__()
+
         #  ______________________________________________________________
         # |  __________________________________________________________  |
         # | | Options for the App Tkinter (Nouvelle fenetre):          | |
@@ -239,6 +235,7 @@ class App(tkinter.Tk):
             self.Parse.warn(f'No calcul, the calcul is 0')
         else:
             self.Parse.succes(f'The calcul is: {str(calcul)}')
+
 
 #  _________________________________________________
 # |  _____________________________________________  |
