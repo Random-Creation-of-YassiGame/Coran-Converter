@@ -87,7 +87,7 @@ def LaunchUpdate():
             zip_ref.extractall('../data/files/cache/update/unzip_update')
 
         root_src_dir = '../data/files/cache/update/unzip_update/Coran-Converter-main'
-        root_dst_dir = './'
+        root_dst_dir = '../'
 
 
         for src_dir, dirs, files in os.walk(root_src_dir):
