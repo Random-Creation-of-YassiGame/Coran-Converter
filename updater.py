@@ -54,12 +54,11 @@ else:
     print(" ↪ Pillow is installed")
 
 
-
+## Import some other modules:
 import json, os, shutil, zipfile, requests
-from pathlib import Path
-from tkinter import messagebox
-
 from scripts.app import launchapp
+from tkinter import messagebox
+from pathlib import Path
 
 zip_to_install = 'https://github.com/Random-Creation-of-YassiGame/Coran-Converter/archive/refs/heads/main.zip'
 update_cache_in_github = 'https://raw.githubusercontent.com/Random-Creation-of-YassiGame/Coran-Converter/main/data/files/cache/cache_version.json'
@@ -104,7 +103,7 @@ def LaunchUpdate():
                     os.remove(dst_file)
                 shutil.move(src_file, dst_dir)
 
-        messagebox.showinfo("The Update are done", "So, please restart the program.")
+        messagebox.showinfo("The Update is done", "So, please restart the program.")
         exit()
 
 
