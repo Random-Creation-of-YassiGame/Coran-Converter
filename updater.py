@@ -102,6 +102,9 @@ def LaunchUpdate():
                     os.remove(dst_file)
                 shutil.move(src_file, dst_dir)
 
+        messagebox.showinfo("The Update are done", "So, please restart the program.")
+        exit()
+
 
 #  _________________________________________________
 # |  _____________________________________________  |
