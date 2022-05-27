@@ -117,7 +117,7 @@ if __name__ == '__main__':
         my_abs_path = my_file.resolve(strict=True)
 
     except FileNotFoundError:
-        print(" >  Je ne trouve pas le fichier 'cache_version.json', je vais créé un nouveau fichier:")
+        messagebox.showerror("No Version Cache File", "The file responsible for storing the local version of the app does not exist. We will launch the update.")
         LaunchUpdate()
 
     else:
@@ -141,7 +141,8 @@ if __name__ == '__main__':
                 LaunchUpdate()
 
         except json.decoder.JSONDecodeError:
-            messagebox.showinfo("No Data in the cache version file", "The file responsible for checking the version of the app has no data. We will launch the update.")
+            messagebox.showerror("No Data in the cache version file", "The file responsible for checking the version of the app has no data. We will launch the update.")
+            root.destroy()
             LaunchUpdate()
 
 
