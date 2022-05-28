@@ -63,6 +63,7 @@ update_cache_in_github = 'https://raw.githubusercontent.com/Random-Creation-of-Y
 path_update_cache = "../data/files/cache/cache_version.json"
 update_zipfile = '../data/files/cache/update/update.zip'
 
+
 def launchapp():
     import scripts.app as app
     app.launchapp()
@@ -93,13 +94,17 @@ class MessageBox():
 
 message = MessageBox()
 
+def error(id):
+    if id == 1:
+        message.error("Download Error:","Unable to connect to server at 'github.com'.\nHere are three other things you can try to fix this problem :\n\n↪ Try again later.\n↪ Check your network connection.\n↪ If you are connected through a firewall, verify that the app has permission to access the web.\n\n↳ The app will be launched without the update !",True)
+
+
 def LaunchUpdate():
     try:
         r = requests.get(zip_to_install, allow_redirects=True)
 
     except requests.exceptions.ConnectionError:
-        message.error("Download Error:", "Maybe, you have no connection or maybe, you are ip banned from GitHub.")
-        LaunchUpdate()
+        error(1)
 
     else:
 
@@ -151,7 +156,7 @@ if __name__ == '__main__':
         try:
             r = requests.get(update_cache_in_github, stream=True)
         except requests.exceptions.ConnectionError:
-            message.error("Download Error:", "Maybe, you have no connection or maybe, you are ip banned from GitHub.", True)
+            error(1)
         else:
             r = str(r.content).replace("'", "")
             version_in_github = r.replace("b", "")
@@ -163,10 +168,10 @@ if __name__ == '__main__':
                     output = json.load(file)
 
                 if str(output['version']) == str(version_in_github['version']):
-                    message.info("You have the latest version", "The app has latest version")
+                    print(f"You have the latest version\n ↪ The version: V{str(output['version'])}")
                     launchapp()
                 else:
-                    message.warn("Don't Have recent version !", f"You have the version '{str(output['version'])}', but in github the new version is '{str(version_in_github['version'])}'. We will launch the update.")
+                    message.warn("You don't have the latest version !", f"You have the version 'V{str(output['version'])}', But the latest version according to the repo on GitHub is 'V{str(version_in_github['version'])}'.\n\n↪ We will launch the update.")
                     LaunchUpdate()
 
             except json.decoder.JSONDecodeError:
