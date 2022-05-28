@@ -64,6 +64,6 @@ La mise a jour automatique est la fonction que j'essaye de pratiquer sur ce proj
 
 | Bugs a corriger |                 Info                          |
 |-----------------|-----------------------------------------------|
-|Arabic formmater |`'L'arabe n'est pas bien visible avec tkinter'`|
+|Arabic formmater |`"L'arabe n'est pas bien visible avec tkinter"`|
 |.....            |`...`                                          |
 |.....            |`...`                                          |
