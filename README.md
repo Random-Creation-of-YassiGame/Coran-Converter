@@ -13,8 +13,21 @@ Vous devez avoir python installer sur votre périphérique, **Sans python**, l'a
 
 >Tikinter:
 
-L'aplication utulise Tkinter qui est un module de python gratuit et connu. Il **s'installe** **automatiquement** s'il n'existe pas !
+L'application utilise Tkinter qui est un module de python gratuit et connu. Il **s'installe** **automatiquement** s'il n'existe pas !
+
+↪ **L'installation automatique des modules** est en **BETA TESTING**, ce qui veux dire que **des bugs** peuvent être présent, **je conseille d'ouvrir la console de votre périphérique (cmd), et d'exécuté cette commande (si le programme marche pas)**:
+
+    pip install tkinter
+    
+
+>Pillow:
+
+L'application utilise Pillow qui est un module de python gratuit, il va servir a lancé l'image de l'application (le logo). Il **s'installe** **automatiquement** s'il n'existe pas !
+
+↪ **L'installation automatique des modules** est en **BETA TESTING**, ce qui veux dire que **des bugs** peuvent être présent, **je conseille d'ouvrir la console de votre périphérique (cmd), et d'exécuté cette commande (si le programme marche pas)**:
+
+    pip install pillow
 
 # Fichiers
 
-L'application stocke des fichiers dans le dossier ou il est installé, ce qui signifie que tous les fichiers sont stocker localement dans un seul dossier et sont accessibles par l'utulisateur.
+L'application stocke des fichiers dans le dossier ou il est installé, ce qui signifie que tous les fichiers sont stocker localement dans un seul dossier et sont accessibles par l'utilisateur.
