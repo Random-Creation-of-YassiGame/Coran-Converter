@@ -54,7 +54,16 @@ Après l'installation du **zip** ([Clique ici pour installer le zip](https://git
 
 # Mise a jour Automatic (BETA)
 
-La mise a jour automatique est la fonction que j'essaye de pratiquer sur ce projet pour permettre a l'utilisateur le confort de ne pas check a chaque jour si une mise a jour a eu lieu ! qui soit un débutant ou professionnel, il doit seulement lancé l'application.
+La mise a jour automatique est la fonction que j'essaye de pratiquer sur ce projet pour permettre a l'utilisateur le confort de ne pas vérifier a chaque jour si une mise a jour a eu lieu ! qui soit un débutant ou professionnel, il doit seulement lancé l'application.
 
 > Il y a **quelque erreur** possible c'est pourquoi **vous pouvez désactiver** la mise a jour auto a l'aide du **bouton** `config`:
 > ![enter image description here](https://cdn.discordapp.com/attachments/937796349884248104/980070584652292106/unknown.png)
+
+
+# Bugs connus:
+
+| Bugs a corriger |                 Info                          |
+|-----------------|-----------------------------------------------|
+|Arabic formmater |`'L'arabe n'est pas bien visible avec tkinter'`|
+|.....            |`...`                                          |
+|.....            |`...`                                          |
