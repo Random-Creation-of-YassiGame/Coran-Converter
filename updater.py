@@ -69,21 +69,21 @@ def launchapp():
 
 
 class MessageBox():
-    def info(self, title, str, startapp: bool = False):
+    def info(self, title, str, startapp=False):
         root = Tk()
         root.geometry("0x0")
         root.withdraw()
         messagebox.showinfo(title, str)
         root.destroy()
         if startapp: launchapp()
-    def warn(self, title, str, startapp: bool):
+    def warn(self, title, str, startapp=False):
         root = Tk()
         root.geometry("0x0")
         root.withdraw()
         messagebox.showwarning(title, str)
         root.destroy()
         if startapp: launchapp()
-    def error(self, title, str, startapp: bool):
+    def error(self, title, str, startapp=False):
         root = Tk()
         root.geometry("0x0")
         root.withdraw()
