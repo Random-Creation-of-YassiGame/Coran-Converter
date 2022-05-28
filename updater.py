@@ -131,7 +131,7 @@ def LaunchUpdate():
                     os.remove(dst_file)
                 shutil.move(src_file, dst_dir)
 
-        message.info("The Update is done", "So, please restart the program.")
+        message.info("The Update is done", "The latest version has been successfully installed.\n\n↪ Please restart the program again.")
         exit()
 
 
