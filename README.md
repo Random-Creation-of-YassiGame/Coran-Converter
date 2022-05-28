@@ -44,8 +44,17 @@ Après l'installation du **zip** ([Clique ici pour installer le zip](https://git
 > Après sa vous aurez un dossier avec le même nom qui a apparu !
 
 > Dans le dossier vous allez trouver un fichier ave l'extension `.py` sous le nom `updater.py`. Vous allez double cliquer sur le fichier pour lancer le programme !
-
 > ![enter image description here](https://cdn.discordapp.com/attachments/937796349884248104/980067265921810442/unknown.png)
 
 > Vous allez avoir normalement cette fenêtre apparaitre:
  > ![enter image description here](https://cdn.discordapp.com/attachments/937796349884248104/980068360240910366/unknown.png)↬ Image prit le 28/05/2022, il se peut que l'image ne représente pas l'application d'aujourd'hui.
+
+
+
+
+# Mise a jour Automatic (BETA)
+
+La mise a jour automatique est la fonction que j'essaye de pratiquer sur ce projet pour permettre a l'utilisateur le confort de ne pas check a chaque jour si une mise a jour a eu lieu ! qui soit un débutant ou professionnel, il doit seulement lancé l'application.
+
+> Il y a **quelque erreur** possible c'est pourquoi **vous pouvez désactiver** la mise a jour auto a l'aide du **bouton** `config`:
+> ![enter image description here](https://cdn.discordapp.com/attachments/937796349884248104/980070584652292106/unknown.png)
