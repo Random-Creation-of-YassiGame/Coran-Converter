@@ -1,12 +1,13 @@
-# Bienvenue dans le convertisseur de Coran:
+
+# 🎈 Bienvenue dans le convertisseur de Coran:
 
 Bien, je te présente un projet qu'on m'as demandé de faire. C'est un convertisseur de lettre arabe vers chiffres. Ce programme respecte le langage de décryptage **arithmétique de chameau**. Trouver sur [Wikipedia](https://ar.wikipedia.org/wiki/%D8%AD%D8%B3%D8%A7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D9%84).
 
-## Le langage de décryption:
+## 🔮 Le langage de décryption:
 ![enter image description here](https://upload.wikimedia.org/wikipedia/commons/d/d8/%D8%AD%D8%B3%D8%A7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D9%84.png)
 
 
-# Python
+# 💻 Python
 
 Vous devez avoir python installer sur votre périphérique, **Sans python**, l'application **ne va pas se lancé** !
 
@@ -29,11 +30,11 @@ L'application utilise Pillow qui est un module de python gratuit, il va servir a
 
     pip install pillow
 
-# Fichiers
+# 📂 Fichiers
 
 L'application stocke des fichiers dans le dossier ou il est installé, ce qui signifie que tous les fichiers sont stocker localement dans un seul dossier et sont accessibles par l'utilisateur.
 
-# Comment l'utiliser
+# 🔎 Comment l'utiliser
 
 Après l'installation du **zip** ([Clique ici pour installer le zip](https://github.com/Random-Creation-of-YassiGame/Coran-Converter/archive/refs/heads/main.zip)) et de l'application **python** sur votre périphérique. 
 
@@ -52,7 +53,7 @@ Après l'installation du **zip** ([Clique ici pour installer le zip](https://git
 
 
 
-# Mise a jour Automatic (BETA)
+# 🔧 Mise a jour Automatic (BETA)
 
 La mise a jour automatique est la fonction que j'essaye de pratiquer sur ce projet pour permettre a l'utilisateur le confort de ne pas vérifier a chaque jour si une mise a jour a eu lieu ! qui soit un débutant ou professionnel, il doit seulement lancé l'application.
 
@@ -60,7 +61,7 @@ La mise a jour automatique est la fonction que j'essaye de pratiquer sur ce proj
 > ![enter image description here](https://cdn.discordapp.com/attachments/937796349884248104/980070584652292106/unknown.png)
 
 
-# Bugs connus:
+# 📡 Bugs connus:
 
 | Bugs a corriger |                 Info                          |
 |-----------------|-----------------------------------------------|
